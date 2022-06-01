@@ -1,0 +1,39 @@
+.app-section {
+	padding: 8rem 0;
+}
+
+.app {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 9rem;
+	align-items: center;
+
+	&__img {
+		height: 60rem;
+		width: 58rem;
+
+		img {
+			@include img-size;
+		}
+	}
+
+	&__content {
+		.sub-heading {
+			color: $color-primary;
+			font-size: 1.9rem;
+		}
+
+		h2 {
+			text-align: left;
+		}
+
+		.text {
+			// line-height: 2.8rem;
+		}
+	}
+	&__btns {
+		.btn {
+			padding: 0;
+		}
+	}
+}
