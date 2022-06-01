@@ -1,0 +1,55 @@
+.tips-section {
+	padding: 5rem 0;
+
+	.sub-heading {
+		font-size: 1.9rem;
+		color: $color-primary;
+	}
+
+	.text {
+		font-size: 1.4rem;
+	}
+}
+
+.tips {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: center;
+	gap: 6rem;
+
+	&__image {
+		margin-left: -8rem;
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		align-items: center;
+		gap: 1.6rem;
+	}
+
+	&__item {
+		background-color: $color-white;
+
+		padding: 1.6rem;
+		border-radius: 0.6rem;
+		border: 1px solid rgba(0, 0, 0, 0.107);
+		transition: all 0.3s;
+
+		&:hover {
+			box-shadow: rgb(99 99 99 / 15%) 0px 0px 20px 1px;
+			border: 1px solid rgba(0, 0, 0, 0);
+		}
+
+		&--img {
+			height: 4rem;
+			width: 7.6rem;
+		}
+
+		h6 {
+		}
+
+		.text {
+		}
+	}
+}

@@ -1,0 +1,25 @@
+button {
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.btn {
+	padding: 1.3rem 3rem;
+	background: transparent;
+	color: $color-secondary;
+	font-size: 1.4rem;
+	border-radius: 1rem;
+	font-family: $font-primary;
+	transition: all 0.3s;
+	text-transform: capitalize;
+	border: none;
+}
+.btn.active {
+	background: $color-primary;
+	color: $color-white !important;
+
+	.icon {
+		display: block !important;
+	}
+}
