@@ -14,6 +14,13 @@ button {
 	transition: all 0.3s;
 	text-transform: capitalize;
 	border: none;
+
+	@media only screen and (max-width: $tab-land) {
+		font-size: 1.2rem;
+	}
+	@media only screen and (max-width: $tab-port) {
+		font-size: 1rem;
+	}
 }
 .btn.active {
 	background: $color-primary;

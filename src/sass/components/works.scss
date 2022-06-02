@@ -1,6 +1,16 @@
 .works-section {
 	padding: 16rem 0 8rem 0;
 
+	@media only screen and (max-width: $tab-land) {
+		padding: 45rem 0 8rem 0;
+	}
+	@media only screen and (max-width: $mbl-port) {
+		padding: 52rem 0 8rem 0;
+	}
+	@media only screen and (max-width: $mbl-small) {
+		padding: 58rem 0 8rem 0;
+	}
+
 	.sub-heading {
 		color: $color-primary;
 		font-size: 1.9rem;
@@ -13,11 +23,22 @@
 	gap: 2rem;
 	position: relative;
 
+	@media only screen and (max-width: $tab-land) {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 5rem 2rem;
+	}
+
 	.arrow {
 		position: absolute;
 		top: 0;
 		left: 50%;
 		transform: translateX(-50%);
+
+		@media only screen and (max-width: $tab-land) {
+			left: 88%;
+			top: 56%;
+			transform: translateX(-50%) rotate(90deg);
+		}
 	}
 
 	&__item {

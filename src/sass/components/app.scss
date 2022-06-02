@@ -8,9 +8,22 @@
 	gap: 9rem;
 	align-items: center;
 
+	@media only screen and (max-width: $tab-port) {
+		grid-template-columns: repeat(1, 1fr);
+		gap: 0;
+	}
+
 	&__img {
 		height: 60rem;
 		width: 58rem;
+
+		@media only screen and (max-width: $tab-land) {
+			height: 42rem;
+			width: 42rem;
+		}
+		@media only screen and (max-width: $tab-port) {
+			margin: 0 auto;
+		}
 
 		img {
 			@include img-size;
@@ -18,6 +31,9 @@
 	}
 
 	&__content {
+		@media only screen and (max-width: $tab-port) {
+			margin: 0 auto;
+		}
 		.sub-heading {
 			color: $color-primary;
 			font-size: 1.9rem;

@@ -1,0 +1,156 @@
+.business {
+	color: #3d76b8;
+
+	h1 {
+		@media only screen and (max-width: $tab-land) {
+			font-size: 3.6rem;
+			line-height: 3.7rem;
+		}
+		@media only screen and (max-width: $mbl-land) {
+			font-size: 2.6rem;
+			// line-height: 1.9rem;
+		}
+	}
+	h2 {
+		font-weight: 300;
+		font-size: 5rem;
+		line-height: 6.2rem;
+
+		@media only screen and (max-width: $tab-land) {
+			font-size: 3.5rem;
+			line-height: 4.2rem;
+		}
+		@media only screen and (max-width: $mbl-land) {
+			font-size: 2.5rem;
+			line-height: 3.2rem;
+		}
+		@media only screen and (max-width: $mbl-small) {
+			font-size: 2.3rem;
+			line-height: 2.7rem;
+		}
+	}
+
+	.text {
+		line-height: 2.4rem;
+	}
+
+	.subscribe-section {
+		padding: 2rem 0 8rem 0;
+
+		.shape {
+			top: -22rem;
+			@media only screen and (max-width: $mbl-land) {
+				height: 36rem;
+				width: 33rem;
+				top: -12rem;
+			}
+		}
+	}
+
+	.header-section {
+		background-image: url('../img/business-bg-hero.png');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		position: relative;
+		height: auto;
+		text-align: center;
+		overflow: hidden;
+
+		@media only screen and (max-width: 87.5em) {
+			margin-top: -8rem;
+		}
+		@media only screen and (max-width: $tab-land) {
+			margin-top: -5rem;
+		}
+
+		.header {
+			display: block;
+			margin-top: 12rem;
+
+			.text {
+				color: #4743c9;
+			}
+		}
+
+		.features {
+			gap: 5rem;
+			margin: 0 auto;
+
+			@media only screen and (max-width: $mbl-port) {
+				gap: 2rem;
+			}
+
+			&__item {
+				gap: 2rem;
+				@media only screen and (max-width: $mbl-port) {
+					gap: 1rem;
+				}
+
+				img {
+					height: 3.4rem;
+					width: 3.4rem;
+					border-radius: 50%;
+				}
+			}
+		}
+
+		.dashboard {
+			height: 67.5rem;
+			width: 83.8rem;
+			margin: 0 auto;
+
+			@media only screen and (max-width: $tab-land) {
+				height: auto;
+				width: 80%;
+			}
+			@media only screen and (max-width: $mbl-port) {
+				height: auto;
+				width: 90%;
+			}
+
+			img {
+				@include img-size;
+			}
+		}
+	}
+
+	.features-section {
+		padding: 5rem 0 0 0;
+	}
+
+	.feature {
+		&__item {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 2rem;
+			align-items: center;
+		}
+		&__content {
+			width: 68rem;
+
+			@media only screen and (max-width: $laptop-land) {
+				width: 100%;
+			}
+
+			h2,
+			.text {
+				text-align: left;
+			}
+		}
+		&__img {
+			width: 69.6rem;
+			height: 91rem;
+			// transform: translateX(25rem);
+
+			@media only screen and (max-width: $laptop-land) {
+				width: auto;
+				height: auto;
+			}
+
+			img {
+				@include img-size;
+			}
+		}
+	}
+}

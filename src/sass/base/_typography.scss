@@ -5,25 +5,30 @@ h1.heading {
 	line-height: 7.2rem;
 	color: $color-secondary;
 
-	// @media only screen and (max-width: $tab-land) {
-	// 	font-size: 4.5rem;
-	// }
-	// @media only screen and (max-width: $mbl-port) {
-	// 	font-size: 3.5rem;
-	// }
+	@media only screen and (max-width: $tab-land) {
+		font-size: 4.8rem;
+		line-height: 6.2rem;
+	}
+	@media only screen and (max-width: $tab-port) {
+		font-size: 4rem;
+		line-height: 6.2rem;
+	}
+	@media only screen and (max-width: $mbl-port) {
+		font-size: 3.5rem;
+		line-height: 5.2rem;
+	}
 }
 h2.heading {
-	font-size: 3.2rem;
+	font-size: 4.2rem;
 	font-family: $font-primary;
 	font-weight: 400;
 	color: $color-secondary;
 	line-height: 3.8rem;
 	text-align: center;
 
-	// @media only screen and (max-width: $tab-land) {
-	// 	font-size: 4.8rem;
-	// 	font-weight: 700;
-	// }
+	@media only screen and (max-width: $tab-land) {
+		font-size: 2.6rem;
+	}
 	// @media only screen and (max-width: $mbl-port) {
 	// 	font-size: 3.5rem;
 	// }
@@ -37,6 +42,10 @@ h3.heading {
 	font-size: 4.5rem;
 	line-height: 5.4rem;
 	color: $color-primary;
+
+	// @media only screen and (max-width: $tab-land) {
+	// 	font-size: 2.6rem;
+	// }
 }
 
 h4.heading {
@@ -54,6 +63,10 @@ h4.heading {
 	font-family: $font-primary;
 	text-transform: capitalize;
 	line-height: 2.2rem;
+
+	@media only screen and (max-width: $tab-land) {
+		font-size: 1.4rem;
+	}
 }
 
 // Typography utils

@@ -1,9 +1,31 @@
 .subscribe-section {
-	padding: 8rem 0;
+	padding: 20rem 0 8rem 0;
 	position: relative;
+	margin-bottom: -20rem;
+
+	.custom-container {
+		@media only screen and (max-width: $tab-port) {
+			padding: 0;
+		}
+	}
 
 	.shape {
-		display: none;
+		position: absolute;
+		top: -15rem;
+		right: 0rem;
+		height: 60rem;
+		width: 64rem;
+
+		@media only screen and (max-width: $tab-land) {
+			height: 40rem;
+			width: 46rem;
+			top: 10rem;
+		}
+		@media only screen and (max-width: $tab-port) {
+			height: 36rem;
+			width: 33rem;
+			top: 4rem;
+		}
 	}
 }
 

@@ -32,6 +32,15 @@
 	margin-top: -15rem;
 	padding-bottom: 5rem;
 
+	@media only screen and (max-width: $tab-land) {
+		grid-template-columns: repeat(2, 1fr);
+		padding: 0 10rem;
+		gap: 5rem 2rem;
+	}
+	@media only screen and (max-width: $tab-port) {
+		padding: 0;
+	}
+
 	&__item {
 		background-color: $color-white;
 		border-radius: 1rem;

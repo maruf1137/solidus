@@ -15,9 +15,14 @@ html {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
+@media only screen and (max-width: 64em) {
+  html {
+    font-size: 58%;
+  }
+}
 @media only screen and (max-width: 62em) {
   html {
-    font-size: 55%;
+    font-size: 50%;
   }
 }
 @media only screen and (max-width: 35.9375em) {
@@ -44,6 +49,11 @@ body {
 }
 @media only screen and (max-width: 75em) {
   .custom-container {
+    padding: 0 6rem;
+  }
+}
+@media only screen and (max-width: 48em) {
+  .custom-container {
     padding: 0 2rem;
   }
 }
@@ -55,14 +65,37 @@ h1.heading {
   line-height: 7.2rem;
   color: #165cae;
 }
+@media only screen and (max-width: 62em) {
+  h1.heading {
+    font-size: 4.8rem;
+    line-height: 6.2rem;
+  }
+}
+@media only screen and (max-width: 48em) {
+  h1.heading {
+    font-size: 4rem;
+    line-height: 6.2rem;
+  }
+}
+@media only screen and (max-width: 30em) {
+  h1.heading {
+    font-size: 3.5rem;
+    line-height: 5.2rem;
+  }
+}
 
 h2.heading {
-  font-size: 3.2rem;
+  font-size: 4.2rem;
   font-family: "Inter", sans-serif;
   font-weight: 400;
   color: #165cae;
   line-height: 3.8rem;
   text-align: center;
+}
+@media only screen and (max-width: 62em) {
+  h2.heading {
+    font-size: 2.6rem;
+  }
 }
 
 h3.heading {
@@ -88,6 +121,11 @@ h4.heading {
   font-family: "Inter", sans-serif;
   text-transform: capitalize;
   line-height: 2.2rem;
+}
+@media only screen and (max-width: 62em) {
+  .text {
+    font-size: 1.4rem;
+  }
 }
 
 .bold {
@@ -1031,6 +1069,16 @@ button {
   text-transform: capitalize;
   border: none;
 }
+@media only screen and (max-width: 62em) {
+  .btn {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 48em) {
+  .btn {
+    font-size: 1rem;
+  }
+}
 
 .btn.active {
   background: #23a6f0;
@@ -1045,7 +1093,16 @@ button {
   justify-content: start;
   align-items: center;
   padding: 1rem 15rem;
-  border-bottom: 1px solid #000;
+}
+@media only screen and (max-width: 87.5em) {
+  .nav {
+    padding: 1rem 4rem;
+  }
+}
+@media only screen and (max-width: 75em) {
+  .nav {
+    padding: 1rem 2rem;
+  }
 }
 .nav__logo {
   height: auto;
@@ -1061,6 +1118,11 @@ button {
   align-items: center;
   gap: 3.2rem;
 }
+@media only screen and (max-width: 62em) {
+  .nav__list {
+    display: none;
+  }
+}
 .nav__link {
   color: #165cae;
   font-size: 1.4rem;
@@ -1070,6 +1132,11 @@ button {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+@media only screen and (max-width: 62em) {
+  .nav .signup-wrapper {
+    display: none;
+  }
 }
 .nav .signup-wrapper .btn {
   display: flex;
@@ -1084,71 +1151,78 @@ button {
   fill: #fff;
   display: none;
 }
+.nav .bars {
+  height: 5rem;
+  width: 5rem;
+  background-color: transparent;
+  display: none;
+}
+@media only screen and (max-width: 62em) {
+  .nav .bars {
+    display: block;
+  }
+}
+.nav .bars img {
+  height: 100%;
+  width: 100%;
+}
+.footer-wrapper {
+  padding: 22rem 0 5rem 0;
+  background-color: #295b99;
+}
 
-.footer-section {
-  padding: 8rem 0 0 0;
-  background-color: #165cae;
+.ml-20 {
+  margin-left: 20rem !important;
+}
+@media only screen and (max-width: 30em) {
+  .ml-20 {
+    margin-left: 12rem !important;
+  }
 }
 
 .footer {
   color: #fff;
-  padding-bottom: 3.5rem;
-  gap: 8rem 0;
 }
-.footer__col-1 {
-  margin-right: 8rem;
+.footer__links .list {
+  gap: 4rem;
 }
-.footer__col-1 h6 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #fff;
-  font-family: "Inter", sans-serif;
-}
-.footer__col-1 .text {
-  color: #fff;
-  font-size: 1.8rem;
-  opacity: 0.8;
-  font-family: "Work Sans", sans-serif;
-  font-weight: 400;
-}
-.footer__list a:link,
-.footer__list a:visited,
-.footer__list .heading {
-  font-size: 1.6rem;
-  font-weight: 500;
-  color: #fff;
-  text-decoration: none;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  opacity: 0.8;
-}
-.footer__list .heading {
-  opacity: 1;
-}
-.footer__list li:not(:last-child) {
-  margin-bottom: 1.4rem;
-}
-
-.copyright {
-  padding: 3rem 0;
-  border-top: 1px solid #fff;
-}
-@media only screen and (max-width: 35.9375em) {
-  .copyright {
-    flex-direction: column;
-    gap: 3rem 0;
-    text-align: center;
+@media only screen and (max-width: 48em) {
+  .footer__links .list {
+    padding: 0 8rem;
   }
 }
-.copyright .text {
-  font-size: 1.6rem;
-  color: #fff;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  opacity: 0.8;
+@media only screen and (max-width: 30em) {
+  .footer__links .list {
+    padding: 0;
+  }
 }
-.copyright .social {
-  gap: 3rem;
+.footer__links .list a:link,
+.footer__links .list a:visited {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+.footer__links .social {
+  gap: 1rem;
+}
+.footer__copyright {
+  border-top: 1px solid #9392bf;
+}
+@media only screen and (max-width: 48em) {
+  .footer__copyright {
+    border-top: 0px solid #9392bf;
+  }
+}
+.footer__copyright a:link,
+.footer__copyright a:visited {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+.footer__copyright .text {
+  font-size: 1.4rem;
+  color: #fff;
+  font-weight: 400;
 }
 
 .header-section {
@@ -1161,11 +1235,34 @@ button {
   justify-content: center;
   align-items: center;
 }
+@media only screen and (max-width: 62em) {
+  .header-section {
+    background-image: url("../img/tab-bg-hero.png");
+  }
+}
+@media only screen and (max-width: 48em) {
+  .header-section {
+    background-image: url("../img/mbl-bg-hero.png");
+    height: 80rem;
+  }
+}
 
 .header {
   display: grid;
   grid-template-columns: 1fr 41rem;
   align-items: center;
+  gap: 3rem;
+}
+@media only screen and (max-width: 48em) {
+  .header {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media only screen and (max-width: 48em) {
+  .header h1,
+.header .text {
+    margin-bottom: 1rem !important;
+  }
 }
 .header__btns {
   gap: 1.3rem;
@@ -1217,10 +1314,22 @@ button {
   color: #165cae;
   margin-bottom: 0.6rem;
 }
+@media only screen and (max-width: 62em) {
+  .card-wrapper .send h6,
+.card-wrapper .gets h6 {
+    font-size: 1rem;
+  }
+}
 .card-wrapper .send__amount,
 .card-wrapper .gets__amount {
   font-size: 1.9rem;
   color: #165cae;
+}
+@media only screen and (max-width: 62em) {
+  .card-wrapper .send__amount,
+.card-wrapper .gets__amount {
+    font-size: 1.6rem;
+  }
 }
 .card-wrapper .calculation .heading {
   display: flex;
@@ -1231,10 +1340,21 @@ button {
   font-size: 1.2rem;
   color: #23a6f0;
 }
+@media only screen and (max-width: 62em) {
+  .card-wrapper .calculation span {
+    font-size: 1rem;
+  }
+}
 .card-wrapper .icon {
   height: 1.4rem;
   width: 1.4rem;
   margin-right: 1rem;
+}
+@media only screen and (max-width: 62em) {
+  .card-wrapper .icon {
+    height: 1rem;
+    width: 1rem;
+  }
 }
 .card-wrapper .icon img {
   height: 100%;
@@ -1253,6 +1373,13 @@ button {
 .card-wrapper .rate .amount {
   font-size: 1.2rem;
   width: 10rem;
+}
+@media only screen and (max-width: 62em) {
+  .card-wrapper .fee .amount,
+.card-wrapper .convert .amount,
+.card-wrapper .rate .amount {
+    font-size: 1rem;
+  }
 }
 .card-wrapper .fee .text,
 .card-wrapper .convert .text,
@@ -1275,7 +1402,7 @@ button {
 }
 
 .select_wrap .default_option li {
-  padding: 10px 20px;
+  padding: 1rem 2rem;
 }
 
 .select_wrap .default_option:before {
@@ -1283,9 +1410,9 @@ button {
   position: absolute;
   top: 45%;
   right: 1rem;
-  width: 6px;
-  height: 6px;
-  border: 2px solid;
+  width: 0.6rem;
+  height: 0.6rem;
+  border: 0.2rem solid;
   border-color: transparent transparent #555555 #555555;
   transform: rotate(-45deg) translateY(-50%);
   transition: all 0.5s;
@@ -1302,7 +1429,7 @@ button {
 }
 
 .select_wrap .select_ul li {
-  padding: 10px 20px;
+  padding: 1rem 2rem;
   cursor: pointer;
 }
 
@@ -1352,6 +1479,11 @@ button {
   margin: -5rem 0 2rem 0;
   border-radius: 1rem;
 }
+@media only screen and (max-width: 48em) {
+  .counter {
+    display: none;
+  }
+}
 .counter__item {
   color: #23a6f0;
 }
@@ -1380,8 +1512,32 @@ button {
   align-items: center;
   gap: 6rem;
 }
+@media only screen and (max-width: 62em) {
+  .tips {
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    gap: 0rem;
+    padding: 10rem;
+  }
+}
+@media only screen and (max-width: 35.9375em) {
+  .tips {
+    padding: 0rem;
+  }
+}
 .tips__image {
   margin-left: -8rem;
+  width: 100%;
+  height: 40rem;
+}
+@media only screen and (max-width: 62em) {
+  .tips__image {
+    display: none;
+  }
+}
+.tips__image img {
+  height: 100%;
+  width: 100%;
 }
 .tips__list {
   display: grid;
@@ -1435,6 +1591,18 @@ button {
   margin-top: -15rem;
   padding-bottom: 5rem;
 }
+@media only screen and (max-width: 62em) {
+  .solution {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 10rem;
+    gap: 5rem 2rem;
+  }
+}
+@media only screen and (max-width: 48em) {
+  .solution {
+    padding: 0;
+  }
+}
 .solution__item {
   background-color: #fff;
   border-radius: 1rem;
@@ -1463,6 +1631,21 @@ button {
 .works-section {
   padding: 16rem 0 8rem 0;
 }
+@media only screen and (max-width: 62em) {
+  .works-section {
+    padding: 45rem 0 8rem 0;
+  }
+}
+@media only screen and (max-width: 30em) {
+  .works-section {
+    padding: 52rem 0 8rem 0;
+  }
+}
+@media only screen and (max-width: 23.75em) {
+  .works-section {
+    padding: 58rem 0 8rem 0;
+  }
+}
 .works-section .sub-heading {
   color: #23a6f0;
   font-size: 1.9rem;
@@ -1474,11 +1657,24 @@ button {
   gap: 2rem;
   position: relative;
 }
+@media only screen and (max-width: 62em) {
+  .works {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem 2rem;
+  }
+}
 .works .arrow {
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+}
+@media only screen and (max-width: 62em) {
+  .works .arrow {
+    left: 88%;
+    top: 56%;
+    transform: translateX(-50%) rotate(90deg);
+  }
 }
 .works__item {
   text-align: center;
@@ -1511,13 +1707,35 @@ button {
   gap: 9rem;
   align-items: center;
 }
+@media only screen and (max-width: 48em) {
+  .app {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0;
+  }
+}
 .app__img {
   height: 60rem;
   width: 58rem;
 }
+@media only screen and (max-width: 62em) {
+  .app__img {
+    height: 42rem;
+    width: 42rem;
+  }
+}
+@media only screen and (max-width: 48em) {
+  .app__img {
+    margin: 0 auto;
+  }
+}
 .app__img img {
   height: 100%;
   width: 100%;
+}
+@media only screen and (max-width: 48em) {
+  .app__content {
+    margin: 0 auto;
+  }
 }
 .app__content .sub-heading {
   color: #23a6f0;
@@ -1531,11 +1749,35 @@ button {
 }
 
 .subscribe-section {
-  padding: 8rem 0;
+  padding: 20rem 0 8rem 0;
   position: relative;
+  margin-bottom: -20rem;
+}
+@media only screen and (max-width: 48em) {
+  .subscribe-section .custom-container {
+    padding: 0;
+  }
 }
 .subscribe-section .shape {
-  display: none;
+  position: absolute;
+  top: -15rem;
+  right: 0rem;
+  height: 60rem;
+  width: 64rem;
+}
+@media only screen and (max-width: 62em) {
+  .subscribe-section .shape {
+    height: 40rem;
+    width: 46rem;
+    top: 10rem;
+  }
+}
+@media only screen and (max-width: 48em) {
+  .subscribe-section .shape {
+    height: 36rem;
+    width: 33rem;
+    top: 4rem;
+  }
 }
 
 .subscribe {
@@ -1575,6 +1817,165 @@ button {
 }
 .subscribe__form .btn-submit {
   background-color: transparent;
+}
+
+.business {
+  color: #3d76b8;
+}
+@media only screen and (max-width: 62em) {
+  .business h1 {
+    font-size: 3.6rem;
+    line-height: 3.7rem;
+  }
+}
+@media only screen and (max-width: 35.9375em) {
+  .business h1 {
+    font-size: 2.6rem;
+  }
+}
+.business h2 {
+  font-weight: 300;
+  font-size: 5rem;
+  line-height: 6.2rem;
+}
+@media only screen and (max-width: 62em) {
+  .business h2 {
+    font-size: 3.5rem;
+    line-height: 4.2rem;
+  }
+}
+@media only screen and (max-width: 35.9375em) {
+  .business h2 {
+    font-size: 2.5rem;
+    line-height: 3.2rem;
+  }
+}
+@media only screen and (max-width: 23.75em) {
+  .business h2 {
+    font-size: 2.3rem;
+    line-height: 2.7rem;
+  }
+}
+.business .text {
+  line-height: 2.4rem;
+}
+.business .subscribe-section {
+  padding: 2rem 0 8rem 0;
+}
+.business .subscribe-section .shape {
+  top: -22rem;
+}
+@media only screen and (max-width: 35.9375em) {
+  .business .subscribe-section .shape {
+    height: 36rem;
+    width: 33rem;
+    top: -12rem;
+  }
+}
+.business .header-section {
+  background-image: url("../img/business-bg-hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: auto;
+  text-align: center;
+  overflow: hidden;
+}
+@media only screen and (max-width: 87.5em) {
+  .business .header-section {
+    margin-top: -8rem;
+  }
+}
+@media only screen and (max-width: 62em) {
+  .business .header-section {
+    margin-top: -5rem;
+  }
+}
+.business .header-section .header {
+  display: block;
+  margin-top: 12rem;
+}
+.business .header-section .header .text {
+  color: #4743c9;
+}
+.business .header-section .features {
+  gap: 5rem;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 30em) {
+  .business .header-section .features {
+    gap: 2rem;
+  }
+}
+.business .header-section .features__item {
+  gap: 2rem;
+}
+@media only screen and (max-width: 30em) {
+  .business .header-section .features__item {
+    gap: 1rem;
+  }
+}
+.business .header-section .features__item img {
+  height: 3.4rem;
+  width: 3.4rem;
+  border-radius: 50%;
+}
+.business .header-section .dashboard {
+  height: 67.5rem;
+  width: 83.8rem;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 62em) {
+  .business .header-section .dashboard {
+    height: auto;
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 30em) {
+  .business .header-section .dashboard {
+    height: auto;
+    width: 90%;
+  }
+}
+.business .header-section .dashboard img {
+  height: 100%;
+  width: 100%;
+}
+.business .features-section {
+  padding: 5rem 0 0 0;
+}
+.business .feature__item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: center;
+}
+.business .feature__content {
+  width: 68rem;
+}
+@media only screen and (max-width: 75em) {
+  .business .feature__content {
+    width: 100%;
+  }
+}
+.business .feature__content h2,
+.business .feature__content .text {
+  text-align: left;
+}
+.business .feature__img {
+  width: 69.6rem;
+  height: 91rem;
+}
+@media only screen and (max-width: 75em) {
+  .business .feature__img {
+    width: auto;
+    height: auto;
+  }
+}
+.business .feature__img img {
+  height: 100%;
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

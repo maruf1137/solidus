@@ -8,12 +8,32 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	@media only screen and (max-width: $tab-land) {
+		background-image: url('../img/tab-bg-hero.png');
+	}
+	@media only screen and (max-width: $tab-port) {
+		background-image: url('../img/mbl-bg-hero.png');
+		height: 80rem;
+	}
 }
 
 .header {
 	display: grid;
 	grid-template-columns: 1fr 41rem;
 	align-items: center;
+	gap: 3rem;
+
+	@media only screen and (max-width: $tab-port) {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	h1,
+	.text {
+		@media only screen and (max-width: $tab-port) {
+			margin-bottom: 1rem !important;
+		}
+	}
 
 	&__btns {
 		gap: 1.3rem;
@@ -66,6 +86,13 @@
 			font-size: 1.2rem;
 			color: $color-secondary;
 			margin-bottom: 0.6rem;
+
+			@media only screen and (max-width: $tab-land) {
+				font-size: 1rem;
+			}
+			@media only screen and (max-width: $mbl-port) {
+				// font-size: 1.6rem;
+			}
 		}
 	}
 
@@ -73,6 +100,13 @@
 	.gets__amount {
 		font-size: 1.9rem;
 		color: $color-secondary;
+
+		@media only screen and (max-width: $tab-land) {
+			font-size: 1.6rem;
+		}
+		@media only screen and (max-width: $mbl-port) {
+			// font-size: 1.6rem;
+		}
 	}
 
 	.calculation {
@@ -85,6 +119,13 @@
 		span {
 			font-size: 1.2rem;
 			color: $color-primary;
+
+			@media only screen and (max-width: $tab-land) {
+				font-size: 1rem;
+			}
+			@media only screen and (max-width: $mbl-port) {
+				// font-size: 1.6rem;
+			}
 		}
 	}
 
@@ -92,6 +133,14 @@
 		height: 1.4rem;
 		width: 1.4rem;
 		margin-right: 1rem;
+
+		@media only screen and (max-width: $tab-land) {
+			height: 1rem;
+			width: 1rem;
+		}
+		@media only screen and (max-width: $mbl-port) {
+			// font-size: 1.6rem;
+		}
 
 		img {
 			height: 100%;
@@ -111,6 +160,13 @@
 			// margin-right: 5rem;
 			font-size: 1.2rem;
 			width: 10rem;
+
+			@media only screen and (max-width: $tab-land) {
+				font-size: 1rem;
+			}
+			@media only screen and (max-width: $mbl-port) {
+				// font-size: 1.6rem;
+			}
 		}
 
 		.text {
@@ -138,7 +194,7 @@
 }
 
 .select_wrap .default_option li {
-	padding: 10px 20px;
+	padding: 1rem 2rem;
 }
 
 .select_wrap .default_option:before {
@@ -147,9 +203,9 @@
 	top: 45%;
 	right: 1rem;
 	// transform: translateX(-50%);
-	width: 6px;
-	height: 6px;
-	border: 2px solid;
+	width: 0.6rem;
+	height: 0.6rem;
+	border: 0.2rem solid;
 	border-color: transparent transparent #555555 #555555;
 	transform: rotate(-45deg) translateY(-50%);
 	transition: all 0.5s;
@@ -166,7 +222,7 @@
 }
 
 .select_wrap .select_ul li {
-	padding: 10px 20px;
+	padding: 1rem 2rem;
 	cursor: pointer;
 }
 
@@ -218,6 +274,10 @@
 	margin: -5rem 0 2rem 0;
 	// transform: translateY(-50%);
 	border-radius: 1rem;
+
+	@media only screen and (max-width: $tab-port) {
+		display: none;
+	}
 
 	&__item {
 		color: $color-primary;
