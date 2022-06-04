@@ -25,17 +25,19 @@
 		<main class="main">
 			<nav class="nav">
 				<figure class="nav__logo">
-					<img src="img/logo.png" alt="logo" />
+					<a href="./index.html">
+						<img src="img/logo.png" alt="logo" />
+					</a>
 				</figure>
 				<ul class="nav__list">
 					<li class="nav__item">
-						<a href="#" class="nav__link">business</a>
+						<a href="./business.html" class="nav__link">business</a>
 					</li>
 					<li class="nav__item">
-						<a href="#" class="nav__link">partners</a>
+						<a href="./partners.html" class="nav__link">partners</a>
 					</li>
 					<li class="nav__item">
-						<a href="#" class="nav__link">about us</a>
+						<a href="./about.html" class="nav__link">about us</a>
 					</li>
 				</ul>
 
@@ -53,6 +55,39 @@
 					<img src="img/mbl-bars.png" alt="bar" />
 				</button>
 			</nav>
+
+			<div class="sidebar">
+				<figure class="sidebar__logo">
+					<a href="./index.html">
+						<img src="img/logo.png" alt="logo" />
+					</a>
+				</figure>
+				<ul class="sidebar__list">
+					<li class="sidebar__item">
+						<a href="./business.html" class="sidebar__link" onclick="close-sidebar()">business</a>
+					</li>
+					<li class="sidebar__item">
+						<a href="./partners.html" class="sidebar__link" onclick="close-sidebar()">partners</a>
+					</li>
+					<li class="sidebar__item">
+						<a href="./about.html" class="sidebar__link" onclick="close-sidebar()">about us</a>
+					</li>
+				</ul>
+
+				<div class="signup-wrapper">
+					<a href="#" class="btn btn__login"
+						>login <svg class="icon"><use xlink:href="img/icons.svg#icon-arrow-right"></use></svg
+					></a>
+					<a href="#" class="btn btn__signup active"
+						>signup
+						<svg class="icon"><use xlink:href="img/icons.svg#icon-arrow-right"></use></svg>
+					</a>
+				</div>
+
+				<button class="close-btn">
+					<img src="img/close.png" alt="close" />
+				</button>
+			</div>
 
 			<header class="header-section">
 				<div class="custom-container">

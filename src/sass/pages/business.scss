@@ -52,10 +52,8 @@
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
-		position: relative;
 		height: auto;
 		text-align: center;
-		overflow: hidden;
 
 		@media only screen and (max-width: 87.5em) {
 			margin-top: -8rem;
@@ -66,7 +64,7 @@
 
 		.header {
 			display: block;
-			margin-top: 12rem;
+			margin-top: 20rem;
 
 			.text {
 				color: #4743c9;

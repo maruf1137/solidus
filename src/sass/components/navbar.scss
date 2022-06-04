@@ -2,14 +2,21 @@
 	display: flex;
 	justify-content: start;
 	align-items: center;
-	padding: 1rem 15rem;
-	// border-bottom: 1px solid #000;
+	padding: 2rem 15rem;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #fff;
+	z-index: 2;
+	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 
 	@media only screen and (max-width: 87.5em) {
-		padding: 1rem 4rem;
+		padding: 2rem 4rem;
 	}
 	@media only screen and (max-width: $laptop-land) {
-		padding: 1rem 2rem;
+		padding: 2rem 2rem;
 	}
 
 	&__logo {

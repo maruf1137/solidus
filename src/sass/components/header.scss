@@ -23,6 +23,7 @@
 	grid-template-columns: 1fr 41rem;
 	align-items: center;
 	gap: 3rem;
+	margin-top: 8rem;
 
 	@media only screen and (max-width: $tab-port) {
 		grid-template-columns: repeat(1, 1fr);

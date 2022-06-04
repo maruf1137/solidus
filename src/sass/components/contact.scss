@@ -1,0 +1,142 @@
+.contact-page {
+	h1 {
+		font-weight: 500;
+		font-size: 5.8rem;
+		line-height: 7rem;
+		color: $color-white;
+
+		@media only screen and (max-width: $tab-land) {
+			font-size: 4.8rem;
+			line-height: 6.3rem;
+		}
+		@media only screen and (max-width: $mbl-land) {
+			font-size: 3.8rem;
+			line-height: 5.3rem;
+		}
+	}
+
+	.footer-wrapper {
+		padding: 5rem 0;
+	}
+
+	.header-section {
+		background-image: linear-gradient(#497ebc, #497ebc), url('../img/about-bg-hero.png');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		height: 28rem;
+		text-align: center;
+		align-items: start;
+		padding-top: 8rem;
+
+		@media only screen and (max-width: $tab-land) {
+			// height: auto;
+		}
+
+		.header {
+			display: block;
+
+			.text {
+				color: #00fe83;
+				font-size: 2.4rem;
+				line-height: 3rem;
+
+				@media only screen and (max-width: $tab-land) {
+					font-size: 1.8rem;
+					line-height: 2.5rem;
+					// margin-bottom: 5rem !important;
+				}
+				@media only screen and (max-width: $mbl-land) {
+					font-size: 1.4rem;
+					line-height: 1.4rem;
+					// margin-bottom: 3rem !important;
+				}
+			}
+		}
+	}
+}
+
+.contact-section {
+	padding: 8rem 0;
+	background-color: #f5f6fc;
+
+	h2 {
+		color: #0c266c;
+	}
+
+	.custom-container {
+		max-width: 150rem;
+	}
+}
+
+.contact {
+	background-color: $color-white;
+	padding: 3.5rem 4.5rem;
+	border-radius: 2rem;
+
+	&__title {
+		font-weight: 600;
+		font-size: 1.6rem;
+		line-height: 2.8rem;
+		letter-spacing: 0.233918px;
+		color: #252b42;
+	}
+
+	.input,
+	.message {
+		padding: 1.2rem 2.3rem;
+		border: 1.16959px solid #e6e6e6;
+		border-radius: 5.84794px;
+		font-weight: 400;
+		font-size: 1.6rem;
+		line-height: 3.3rem;
+		letter-spacing: 0.233918px;
+		color: $color-black;
+
+		&::placeholder {
+			color: #737373;
+		}
+	}
+
+	// &__message {
+	// }
+
+	&__btns {
+		gap: 3rem;
+
+		@media only screen and (max-width: $mbl-land) {
+			justify-content: center !important;
+			margin-top: 2rem;
+		}
+
+		.btn {
+			font-weight: 500;
+			font-size: 3.1rem;
+			line-height: 3.8rem;
+			color: #ffffff;
+			transition: all 0.5s;
+		}
+
+		.btn-beck {
+			border: 0.3rem solid #497ebc;
+			border-radius: 0.7rem;
+			background-color: transparent;
+			color: #497ebc;
+
+			&:hover {
+				background: #497ebc;
+				color: #ffffff;
+			}
+		}
+		.btn-submit {
+			background: #497ebc;
+			border: 0.3rem solid #497ebc;
+			border-radius: 0.7rem;
+
+			&:hover {
+				background: transparent;
+				color: #497ebc;
+			}
+		}
+	}
+}

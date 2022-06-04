@@ -346,16 +346,16 @@ a:hover {
 
 @media only screen and (max-width: 35.9375em) {
   .mbl-land-hide {
-    display: none;
+    display: none !important;
   }
 }
 
 .mbl-land-show {
-  display: none;
+  display: none !important;
 }
 @media only screen and (max-width: 35.9375em) {
   .mbl-land-show {
-    display: block;
+    display: block !important;
   }
 }
 
@@ -1092,16 +1092,23 @@ button {
   display: flex;
   justify-content: start;
   align-items: center;
-  padding: 1rem 15rem;
+  padding: 2rem 15rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 2;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 @media only screen and (max-width: 87.5em) {
   .nav {
-    padding: 1rem 4rem;
+    padding: 2rem 4rem;
   }
 }
 @media only screen and (max-width: 75em) {
   .nav {
-    padding: 1rem 2rem;
+    padding: 2rem 2rem;
   }
 }
 .nav__logo {
@@ -1252,6 +1259,7 @@ button {
   grid-template-columns: 1fr 41rem;
   align-items: center;
   gap: 3rem;
+  margin-top: 8rem;
 }
 @media only screen and (max-width: 48em) {
   .header {
@@ -1819,6 +1827,202 @@ button {
   background-color: transparent;
 }
 
+.contact-page h1 {
+  font-weight: 500;
+  font-size: 5.8rem;
+  line-height: 7rem;
+  color: #fff;
+}
+@media only screen and (max-width: 62em) {
+  .contact-page h1 {
+    font-size: 4.8rem;
+    line-height: 6.3rem;
+  }
+}
+@media only screen and (max-width: 35.9375em) {
+  .contact-page h1 {
+    font-size: 3.8rem;
+    line-height: 5.3rem;
+  }
+}
+.contact-page .footer-wrapper {
+  padding: 5rem 0;
+}
+.contact-page .header-section {
+  background-image: linear-gradient(#497ebc, #497ebc), url("../img/about-bg-hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 28rem;
+  text-align: center;
+  align-items: start;
+  padding-top: 8rem;
+}
+.contact-page .header-section .header {
+  display: block;
+}
+.contact-page .header-section .header .text {
+  color: #00fe83;
+  font-size: 2.4rem;
+  line-height: 3rem;
+}
+@media only screen and (max-width: 62em) {
+  .contact-page .header-section .header .text {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+  }
+}
+@media only screen and (max-width: 35.9375em) {
+  .contact-page .header-section .header .text {
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+  }
+}
+
+.contact-section {
+  padding: 8rem 0;
+  background-color: #f5f6fc;
+}
+.contact-section h2 {
+  color: #0c266c;
+}
+.contact-section .custom-container {
+  max-width: 150rem;
+}
+
+.contact {
+  background-color: #fff;
+  padding: 3.5rem 4.5rem;
+  border-radius: 2rem;
+}
+.contact__title {
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  letter-spacing: 0.233918px;
+  color: #252b42;
+}
+.contact .input,
+.contact .message {
+  padding: 1.2rem 2.3rem;
+  border: 1.16959px solid #e6e6e6;
+  border-radius: 5.84794px;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 3.3rem;
+  letter-spacing: 0.233918px;
+  color: #000;
+}
+.contact .input::placeholder,
+.contact .message::placeholder {
+  color: #737373;
+}
+.contact__btns {
+  gap: 3rem;
+}
+@media only screen and (max-width: 35.9375em) {
+  .contact__btns {
+    justify-content: center !important;
+    margin-top: 2rem;
+  }
+}
+.contact__btns .btn {
+  font-weight: 500;
+  font-size: 3.1rem;
+  line-height: 3.8rem;
+  color: #ffffff;
+  transition: all 0.5s;
+}
+.contact__btns .btn-beck {
+  border: 0.3rem solid #497ebc;
+  border-radius: 0.7rem;
+  background-color: transparent;
+  color: #497ebc;
+}
+.contact__btns .btn-beck:hover {
+  background: #497ebc;
+  color: #ffffff;
+}
+.contact__btns .btn-submit {
+  background: #497ebc;
+  border: 0.3rem solid #497ebc;
+  border-radius: 0.7rem;
+}
+.contact__btns .btn-submit:hover {
+  background: transparent;
+  color: #497ebc;
+}
+
+.sidebar {
+  height: 100vh;
+  width: 60%;
+  background-color: #edefff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  padding-top: 5rem;
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-left: 5rem;
+  gap: 8rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  transform: translateX(-100%);
+  transition: all 0.5s ease;
+}
+@media only screen and (max-width: 35.9375em) {
+  .sidebar {
+    width: 100%;
+  }
+}
+.sidebar__list {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+.sidebar__link {
+  font-size: 3rem;
+  text-decoration: none;
+  color: #165cae;
+}
+.sidebar .signup-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.sidebar .signup-wrapper .btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 3rem;
+}
+.sidebar .signup-wrapper .btn .icon {
+  height: 1rem;
+  width: 2rem;
+  display: none;
+}
+.sidebar .signup-wrapper .active {
+  fill: #fff;
+}
+.sidebar .close-btn {
+  height: 3.5rem;
+  width: 3.5rem;
+  position: absolute;
+  top: 5rem;
+  right: 3rem;
+  background-color: transparent;
+}
+.sidebar .close-btn img {
+  height: 100%;
+  width: 100%;
+}
+
+.show-sidebar {
+  transform: translateX(0);
+}
+
 .business {
   color: #3d76b8;
 }
@@ -1877,10 +2081,8 @@ button {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  position: relative;
   height: auto;
   text-align: center;
-  overflow: hidden;
 }
 @media only screen and (max-width: 87.5em) {
   .business .header-section {
@@ -1894,7 +2096,7 @@ button {
 }
 .business .header-section .header {
   display: block;
-  margin-top: 12rem;
+  margin-top: 20rem;
 }
 .business .header-section .header .text {
   color: #4743c9;
@@ -1976,6 +2178,335 @@ button {
 .business .feature__img img {
   height: 100%;
   width: 100%;
+}
+
+.about h1 {
+  font-weight: 500;
+  font-size: 5.8rem;
+  line-height: 7rem;
+  color: #fff;
+}
+@media only screen and (max-width: 62em) {
+  .about h1 {
+    font-size: 4.8rem;
+    line-height: 6.3rem;
+  }
+}
+@media only screen and (max-width: 35.9375em) {
+  .about h1 {
+    font-size: 3.8rem;
+    line-height: 5.3rem;
+  }
+}
+.about .header-section {
+  background-image: url("../img/about-bg-hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 72rem;
+  text-align: center;
+  align-items: start;
+}
+@media only screen and (max-width: 62em) {
+  .about .header-section {
+    height: auto;
+  }
+}
+.about .header-section .header {
+  display: block;
+}
+@media only screen and (max-width: 62em) {
+  .about .header-section .header {
+    margin-bottom: 18rem;
+  }
+}
+.about .header-section .header .text {
+  color: #00fe83;
+  font-size: 2.4rem;
+  line-height: 3rem;
+}
+@media only screen and (max-width: 62em) {
+  .about .header-section .header .text {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    margin-bottom: 5rem !important;
+  }
+}
+@media only screen and (max-width: 35.9375em) {
+  .about .header-section .header .text {
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    margin-bottom: 3rem !important;
+  }
+}
+.about__image {
+  width: 70rem;
+  height: 63rem;
+  margin-top: -20rem;
+  margin-left: 5rem;
+  padding-bottom: 8rem;
+}
+@media only screen and (max-width: 62em) {
+  .about__image {
+    display: none;
+  }
+}
+.about__image img {
+  height: 100%;
+  width: 100%;
+}
+.about .value-section {
+  padding: 8rem 0;
+  background-color: #f5f6fc;
+}
+.about .value-section .text {
+  font-size: 1.9rem;
+  line-height: 2.3rem;
+  color: #4743c9;
+}
+.about .value-section h2 {
+  font-size: 4.4rem;
+  line-height: 5.3rem;
+  text-align: center;
+  color: #0c266c;
+}
+@media only screen and (max-width: 62em) {
+  .about .value-section h2 {
+    font-size: 3.8rem;
+    line-height: 5rem;
+  }
+}
+@media only screen and (max-width: 35.9375em) {
+  .about .value-section h2 {
+    font-size: 3.4rem;
+    line-height: 4.6rem;
+  }
+}
+.about .value__item {
+  text-align: center;
+}
+.about .value__img {
+  height: auto;
+  width: 100%;
+  border-radius: 1rem;
+}
+.about .value__img img {
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+}
+.about .value h3 {
+  font-weight: 400;
+  font-size: 3.2rem;
+  line-height: 3.9rem;
+  color: #0c266c;
+  text-align: center;
+}
+@media only screen and (max-width: 62em) {
+  .about .value h3 {
+    font-size: 2.8rem;
+  }
+}
+@media only screen and (max-width: 35.9375em) {
+  .about .value h3 {
+    font-size: 2.2rem;
+    line-height: 3rem;
+  }
+}
+.about .value .text {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  text-align: center;
+  color: #0c266c;
+}
+@media only screen and (max-width: 62em) {
+  .about .value .text {
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (max-width: 35.9375em) {
+  .about .value .text {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+}
+
+.partners h1 {
+  font-weight: 500;
+  font-size: 5.8rem;
+  line-height: 7rem;
+  color: #fff;
+}
+@media only screen and (max-width: 62em) {
+  .partners h1 {
+    font-size: 4.8rem;
+    line-height: 6.3rem;
+  }
+}
+@media only screen and (max-width: 35.9375em) {
+  .partners h1 {
+    font-size: 3.8rem;
+    line-height: 5.3rem;
+  }
+}
+.partners .footer-wrapper {
+  padding: 5rem 0;
+}
+.partners .header-section {
+  background-image: linear-gradient(#497ebc, #497ebc), url("../img/about-bg-hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 72rem;
+  text-align: center;
+  align-items: start;
+}
+@media only screen and (max-width: 62em) {
+  .partners .header-section {
+    height: auto;
+  }
+}
+.partners .header-section .header {
+  display: block;
+}
+@media only screen and (max-width: 62em) {
+  .partners .header-section .header {
+    margin-bottom: 18rem;
+  }
+}
+.partners .header-section .header .text {
+  color: #00fe83;
+  font-size: 2.4rem;
+  line-height: 3rem;
+}
+@media only screen and (max-width: 62em) {
+  .partners .header-section .header .text {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    margin-bottom: 5rem !important;
+  }
+}
+@media only screen and (max-width: 35.9375em) {
+  .partners .header-section .header .text {
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    margin-bottom: 3rem !important;
+  }
+}
+.partners .api-section {
+  padding: 8rem 5rem;
+}
+@media only screen and (max-width: 62em) {
+  .partners .api-section {
+    padding: 8rem 0rem;
+  }
+}
+.partners .api-section .custom-container {
+  max-width: 150rem;
+}
+.partners .api-section .api__img {
+  height: auto;
+}
+.partners .api-section .api__img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.partners .api-section .api__content h4 {
+  font-weight: 700;
+  font-size: 2.9rem;
+  line-height: 3.6rem;
+  color: #0c266c;
+}
+.partners .api-section .api__content .text {
+  font-weight: 400;
+  font-size: 2.9rem;
+  line-height: 3.6rem;
+  color: #0c266c;
+}
+.partners .api-section .api__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.partners .api-section .api__item {
+  background-color: #e9ecf4;
+  padding: 3.2rem 2.2rem;
+  border-radius: 1rem;
+  filter: drop-shadow(0px 1.12235px 5.7341px rgba(0, 0, 0, 0.2));
+}
+@media only screen and (max-width: 30em) {
+  .partners .api-section .api__item {
+    padding: 2rem 2rem;
+  }
+}
+.partners .api-section .api .title {
+  gap: 2rem;
+  align-items: center !important;
+  margin-bottom: 2rem !important;
+}
+@media only screen and (max-width: 35.9375em) {
+  .partners .api-section .api .title {
+    gap: 1.5rem;
+  }
+}
+.partners .api-section .api .title h5 {
+  font-weight: 400;
+  font-size: 2.6rem;
+  line-height: 3.2rem;
+  color: #0c266c;
+}
+@media only screen and (max-width: 35.9375em) {
+  .partners .api-section .api .title h5 {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+}
+@media only screen and (max-width: 23.75em) {
+  .partners .api-section .api .title h5 {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+}
+.partners .api-section .api__icon {
+  height: 5.1rem;
+  width: 5.1rem;
+  border-radius: 1rem;
+}
+@media only screen and (max-width: 35.9375em) {
+  .partners .api-section .api__icon {
+    height: 4.8rem;
+    width: 4.8rem;
+  }
+}
+@media only screen and (max-width: 23.75em) {
+  .partners .api-section .api__icon {
+    height: 4.2rem;
+    width: 4.2rem;
+  }
+}
+.partners .api-section .api__icon img {
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+}
+.partners .api-section .api .text {
+  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  color: #165cae;
+}
+@media only screen and (max-width: 35.9375em) {
+  .partners .api-section .api .text {
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+  }
+}
+@media only screen and (max-width: 23.75em) {
+  .partners .api-section .api .text {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
