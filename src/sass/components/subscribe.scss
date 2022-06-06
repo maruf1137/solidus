@@ -36,6 +36,8 @@
 	display: flex;
 	gap: 2rem;
 	align-items: center;
+	max-width: 80rem;
+	margin: 0 auto;
 
 	&__img {
 		height: 16.5rem;

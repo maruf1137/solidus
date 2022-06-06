@@ -92,14 +92,22 @@
 		line-height: 3.3rem;
 		letter-spacing: 0.233918px;
 		color: $color-black;
+		-moz-appearance: none;
+		-webkit-appearance: none;
 
 		&::placeholder {
 			color: #737373;
+			text-transform: capitalize;
 		}
 	}
 
-	// &__message {
-	// }
+	.message {
+		height: 60rem;
+
+		@media only screen and (max-width: $mbl-land) {
+			height: 30rem;
+		}
+	}
 
 	&__btns {
 		gap: 3rem;
@@ -111,14 +119,15 @@
 
 		.btn {
 			font-weight: 500;
-			font-size: 3.1rem;
+			font-size: 2.4rem;
 			line-height: 3.8rem;
 			color: #ffffff;
 			transition: all 0.5s;
+			padding: 0.8rem 2.4rem;
 		}
 
 		.btn-beck {
-			border: 0.3rem solid #497ebc;
+			border: 0.2rem solid #497ebc;
 			border-radius: 0.7rem;
 			background-color: transparent;
 			color: #497ebc;
@@ -130,7 +139,7 @@
 		}
 		.btn-submit {
 			background: #497ebc;
-			border: 0.3rem solid #497ebc;
+			border: 0.2rem solid #497ebc;
 			border-radius: 0.7rem;
 
 			&:hover {

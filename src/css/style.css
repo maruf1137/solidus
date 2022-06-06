@@ -7,7 +7,6 @@
   list-style: none;
   text-decoration: none;
   outline: none;
-  text-transform: capitalize;
 }
 
 html {
@@ -55,6 +54,40 @@ body {
 @media only screen and (max-width: 48em) {
   .custom-container {
     padding: 0 2rem;
+  }
+}
+
+.landing-page .custom-container {
+  padding-right: 10rem;
+}
+@media only screen and (max-width: 68.75em) {
+  .landing-page .custom-container {
+    padding-right: 6rem;
+  }
+}
+@media only screen and (max-width: 48em) {
+  .landing-page .custom-container {
+    padding-right: 2rem;
+  }
+}
+@media only screen and (max-width: 64em) {
+  .landing-page .header-section {
+    background-position: top 0px right -99px !important;
+  }
+}
+@media only screen and (max-width: 48em) {
+  .landing-page .header-section {
+    background-position: center !important;
+  }
+}
+@media only screen and (max-width: 30em) {
+  .landing-page .header-section {
+    background-position: top 0px right -90px !important;
+  }
+}
+@media only screen and (max-width: 23.75em) {
+  .landing-page .header-section {
+    background-position: top 0px right -150px !important;
   }
 }
 
@@ -1134,6 +1167,7 @@ button {
   color: #165cae;
   font-size: 1.4rem;
   text-decoration: none;
+  text-transform: capitalize;
 }
 .nav .signup-wrapper {
   display: flex;
@@ -1208,6 +1242,7 @@ button {
   color: #fff;
   text-decoration: none;
   font-size: 1.4rem;
+  text-transform: capitalize;
 }
 .footer__links .social {
   gap: 1rem;
@@ -1225,11 +1260,21 @@ button {
   color: #fff;
   text-decoration: none;
   font-size: 1.4rem;
+  text-transform: capitalize;
 }
 .footer__copyright .text {
   font-size: 1.4rem;
   color: #fff;
   font-weight: 400;
+  text-align: center;
+}
+.footer__copyright .disclaimer-text {
+  text-align: center;
+}
+@media only screen and (max-width: 35.9375em) {
+  .footer__copyright .disclaimer-text {
+    text-align: left;
+  }
 }
 
 .header-section {
@@ -1264,6 +1309,11 @@ button {
 @media only screen and (max-width: 48em) {
   .header {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media only screen and (max-width: 30em) {
+  .header {
+    margin-top: 12rem;
   }
 }
 @media only screen and (max-width: 48em) {
@@ -1306,6 +1356,12 @@ button {
   border-radius: 1rem;
   width: 100%;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+@media only screen and (max-width: 48em) {
+  .card-wrapper {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 .card-wrapper .send,
 .card-wrapper .gets {
@@ -1568,6 +1624,16 @@ button {
   height: 4rem;
   width: 7.6rem;
 }
+.tips__item h6 {
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  color: #165cae;
+}
+.tips__item .text {
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+}
+
 .solution-section {
   height: 50rem;
 }
@@ -1795,6 +1861,8 @@ button {
   display: flex;
   gap: 2rem;
   align-items: center;
+  max-width: 80rem;
+  margin: 0 auto;
 }
 .subscribe__img {
   height: 16.5rem;
@@ -1912,10 +1980,21 @@ button {
   line-height: 3.3rem;
   letter-spacing: 0.233918px;
   color: #000;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
 .contact .input::placeholder,
 .contact .message::placeholder {
   color: #737373;
+  text-transform: capitalize;
+}
+.contact .message {
+  height: 60rem;
+}
+@media only screen and (max-width: 35.9375em) {
+  .contact .message {
+    height: 30rem;
+  }
 }
 .contact__btns {
   gap: 3rem;
@@ -1928,13 +2007,14 @@ button {
 }
 .contact__btns .btn {
   font-weight: 500;
-  font-size: 3.1rem;
+  font-size: 2.4rem;
   line-height: 3.8rem;
   color: #ffffff;
   transition: all 0.5s;
+  padding: 0.8rem 2.4rem;
 }
 .contact__btns .btn-beck {
-  border: 0.3rem solid #497ebc;
+  border: 0.2rem solid #497ebc;
   border-radius: 0.7rem;
   background-color: transparent;
   color: #497ebc;
@@ -1945,7 +2025,7 @@ button {
 }
 .contact__btns .btn-submit {
   background: #497ebc;
-  border: 0.3rem solid #497ebc;
+  border: 0.2rem solid #497ebc;
   border-radius: 0.7rem;
 }
 .contact__btns .btn-submit:hover {
@@ -2357,7 +2437,7 @@ button {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 72rem;
+  height: 45rem;
   text-align: center;
   align-items: start;
 }

@@ -7,7 +7,7 @@
 	list-style: none;
 	text-decoration: none;
 	outline: none;
-	text-transform: capitalize;
+	// text-transform: capitalize;
 }
 // ::selection {
 // 	background: $color-text;
@@ -39,6 +39,7 @@ body {
 	line-height: 1.6rem;
 	color: $color-secondary;
 	overflow-x: hidden;
+	// text-transform: capitalize;
 }
 
 .main {
@@ -54,5 +55,33 @@ body {
 	}
 	@media only screen and (max-width: $tab-port) {
 		padding: 0 2rem;
+	}
+}
+
+.landing-page {
+	.custom-container {
+		padding-right: 10rem;
+
+		@media only screen and (max-width: 68.75em) {
+			padding-right: 6rem;
+		}
+		@media only screen and (max-width: $tab-port) {
+			padding-right: 2rem;
+		}
+	}
+
+	.header-section {
+		@media only screen and (max-width: $laptop-port) {
+			background-position: top 0px right -99px !important;
+		}
+		@media only screen and (max-width: $tab-port) {
+			background-position: center !important;
+		}
+		@media only screen and (max-width: $mbl-port) {
+			background-position: top 0px right -90px !important;
+		}
+		@media only screen and (max-width: $mbl-small) {
+			background-position: top 0px right -150px !important;
+		}
 	}
 }
