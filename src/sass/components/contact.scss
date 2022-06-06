@@ -92,13 +92,20 @@
 		line-height: 3.3rem;
 		letter-spacing: 0.233918px;
 		color: $color-black;
-		-moz-appearance: none;
+		// -moz-appearance: textfield;
 		-webkit-appearance: none;
 
 		&::placeholder {
 			color: #737373;
 			text-transform: capitalize;
 		}
+	}
+	input[type='number'] {
+		-moz-appearance: textfield;
+	}
+	input[type='number']:hover,
+	input[type='number']:focus {
+		-moz-appearance: number-input;
 	}
 
 	.message {

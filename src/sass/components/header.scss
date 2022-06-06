@@ -1,20 +1,34 @@
 .header-section {
 	background-image: url('../img/hero-bg.jpg');
 	background-size: cover;
-	background-position: center;
+	background-position: center right;
 	background-repeat: no-repeat;
 	// height: 100vh;
 	height: 64rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	// position: relative;
 
-	@media only screen and (max-width: $tab-land) {
-		background-image: url('../img/tab-bg-hero.png');
-	}
+	// @media only screen and (max-width: $tab-land) {
+	// 	background-image: url('../img/tab-bg-hero.png');
+	// }
 	@media only screen and (max-width: $tab-port) {
 		background-image: url('../img/mbl-bg-hero.png');
 		height: 80rem;
+		background-position: center left;
+	}
+
+	.header__img {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		z-index: 0;
+
+		@media only screen and (max-width: $tab-port) {
+			bottom: 0;
+			right: 100%;
+		}
 	}
 }
 
@@ -25,6 +39,12 @@
 	gap: 3rem;
 	margin-top: 8rem;
 
+	@media only screen and (max-width: 87.5em) {
+		grid-template-columns: 0.9fr 34rem;
+	}
+	@media only screen and (max-width: 75em) {
+		grid-template-columns: 0.8fr 34rem;
+	}
 	@media only screen and (max-width: $tab-port) {
 		grid-template-columns: repeat(1, 1fr);
 	}
@@ -76,9 +96,16 @@
 	border-radius: 1rem;
 	width: 100%;
 	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	position: relative;
+	z-index: 1;
+	min-width: 30rem;
 
 	@media only screen and (max-width: $tab-port) {
 		width: 80%;
+		margin: 0 auto;
+	}
+	@media only screen and (max-width: $mbl-port) {
+		width: 65%;
 		margin: 0 auto;
 	}
 
@@ -283,6 +310,7 @@
 	margin: -5rem 0 2rem 0;
 	// transform: translateY(-50%);
 	border-radius: 1rem;
+	position: relative;
 
 	@media only screen and (max-width: $tab-port) {
 		display: none;

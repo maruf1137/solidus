@@ -70,26 +70,6 @@ body {
     padding-right: 2rem;
   }
 }
-@media only screen and (max-width: 64em) {
-  .landing-page .header-section {
-    background-position: top 0px right -99px !important;
-  }
-}
-@media only screen and (max-width: 48em) {
-  .landing-page .header-section {
-    background-position: center !important;
-  }
-}
-@media only screen and (max-width: 30em) {
-  .landing-page .header-section {
-    background-position: top 0px right -90px !important;
-  }
-}
-@media only screen and (max-width: 23.75em) {
-  .landing-page .header-section {
-    background-position: top 0px right -150px !important;
-  }
-}
 
 h1.heading {
   font-size: 5.9rem;
@@ -113,7 +93,7 @@ h1.heading {
 @media only screen and (max-width: 30em) {
   h1.heading {
     font-size: 3.5rem;
-    line-height: 5.2rem;
+    line-height: 4.4rem;
   }
 }
 
@@ -1280,22 +1260,30 @@ button {
 .header-section {
   background-image: url("../img/hero-bg.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center right;
   background-repeat: no-repeat;
   height: 64rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-@media only screen and (max-width: 62em) {
-  .header-section {
-    background-image: url("../img/tab-bg-hero.png");
-  }
-}
 @media only screen and (max-width: 48em) {
   .header-section {
     background-image: url("../img/mbl-bg-hero.png");
     height: 80rem;
+    background-position: center left;
+  }
+}
+.header-section .header__img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+}
+@media only screen and (max-width: 48em) {
+  .header-section .header__img {
+    bottom: 0;
+    right: 100%;
   }
 }
 
@@ -1305,6 +1293,16 @@ button {
   align-items: center;
   gap: 3rem;
   margin-top: 8rem;
+}
+@media only screen and (max-width: 87.5em) {
+  .header {
+    grid-template-columns: 0.9fr 34rem;
+  }
+}
+@media only screen and (max-width: 75em) {
+  .header {
+    grid-template-columns: 0.8fr 34rem;
+  }
 }
 @media only screen and (max-width: 48em) {
   .header {
@@ -1356,10 +1354,19 @@ button {
   border-radius: 1rem;
   width: 100%;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  position: relative;
+  z-index: 1;
+  min-width: 30rem;
 }
 @media only screen and (max-width: 48em) {
   .card-wrapper {
     width: 80%;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 30em) {
+  .card-wrapper {
+    width: 65%;
     margin: 0 auto;
   }
 }
@@ -1542,6 +1549,7 @@ button {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   margin: -5rem 0 2rem 0;
   border-radius: 1rem;
+  position: relative;
 }
 @media only screen and (max-width: 48em) {
   .counter {
@@ -1980,13 +1988,19 @@ button {
   line-height: 3.3rem;
   letter-spacing: 0.233918px;
   color: #000;
-  -moz-appearance: none;
   -webkit-appearance: none;
 }
 .contact .input::placeholder,
 .contact .message::placeholder {
   color: #737373;
   text-transform: capitalize;
+}
+.contact input[type=number] {
+  -moz-appearance: textfield;
+}
+.contact input[type=number]:hover,
+.contact input[type=number]:focus {
+  -moz-appearance: number-input;
 }
 .contact .message {
   height: 60rem;
@@ -2051,6 +2065,7 @@ button {
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   transform: translateX(-100%);
   transition: all 0.5s ease;
+  text-transform: capitalize;
 }
 @media only screen and (max-width: 35.9375em) {
   .sidebar {
@@ -2105,43 +2120,6 @@ button {
 
 .business {
   color: #3d76b8;
-}
-@media only screen and (max-width: 62em) {
-  .business h1 {
-    font-size: 3.6rem;
-    line-height: 3.7rem;
-  }
-}
-@media only screen and (max-width: 35.9375em) {
-  .business h1 {
-    font-size: 2.6rem;
-  }
-}
-.business h2 {
-  font-weight: 300;
-  font-size: 5rem;
-  line-height: 6.2rem;
-}
-@media only screen and (max-width: 62em) {
-  .business h2 {
-    font-size: 3.5rem;
-    line-height: 4.2rem;
-  }
-}
-@media only screen and (max-width: 35.9375em) {
-  .business h2 {
-    font-size: 2.5rem;
-    line-height: 3.2rem;
-  }
-}
-@media only screen and (max-width: 23.75em) {
-  .business h2 {
-    font-size: 2.3rem;
-    line-height: 2.7rem;
-  }
-}
-.business .text {
-  line-height: 2.4rem;
 }
 .business .subscribe-section {
   padding: 2rem 0 8rem 0;
@@ -2246,8 +2224,8 @@ button {
   text-align: left;
 }
 .business .feature__img {
-  width: 69.6rem;
-  height: 91rem;
+  height: 100%;
+  width: 100%;
 }
 @media only screen and (max-width: 75em) {
   .business .feature__img {

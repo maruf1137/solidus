@@ -70,18 +70,18 @@ body {
 		}
 	}
 
-	.header-section {
-		@media only screen and (max-width: $laptop-port) {
-			background-position: top 0px right -99px !important;
-		}
-		@media only screen and (max-width: $tab-port) {
-			background-position: center !important;
-		}
-		@media only screen and (max-width: $mbl-port) {
-			background-position: top 0px right -90px !important;
-		}
-		@media only screen and (max-width: $mbl-small) {
-			background-position: top 0px right -150px !important;
-		}
-	}
+	// .header-section {
+	// 	@media only screen and (max-width: $laptop-port) {
+	// 		background-position: top 0px right -99px !important;
+	// 	}
+	// 	@media only screen and (max-width: $tab-port) {
+	// 		background-position: center !important;
+	// 	}
+	// 	@media only screen and (max-width: $mbl-port) {
+	// 		background-position: top 0px right -90px !important;
+	// 	}
+	// 	@media only screen and (max-width: $mbl-small) {
+	// 		background-position: top 0px right -150px !important;
+	// 	}
+	// }
 }
